@@ -12,25 +12,32 @@
   </head>
   <body>
       <header>
-          <h1>Hangman Game</h1>
+        <div class="container">
+            <h1>Hangman Game</h1>
+        </div>
       </header>
       
       <div class="container">
           <div>
               <h3>Object of the game and rules:</h3>
-              <p>The object of the game is to guess a word. The player will pick a letter and if the word contains the letter guessed, it will appear. 
+              <p>The object of the game is to not die by correctly guessing a word one letter at a time. 
+                  The player will pick a letter and if the word contains the letter guessed, it will appear. 
                   If the letter guessed is incorrect, the player is one guess closer to being hanged. 
-                  Play will continue until the full word is revealed or has guessed incorrectly 8 times, whichever is first.</p>
+                  Play will continue until the full word is revealed or has guessed incorrectly 6 times, whichever is first.</p>
           </div>
           <div>
               <h4>Hangman</h4>
-              <img>
-              <p>Game here.</p>
+              <img id="hangmanImage" class=float-left src="assets/images/Hangman-0.png">
+              <p id="gameStatus">Good Luck!</p>
+              <p id="currentLetterGuess"></p>
+              <p id="printToScreen"></p>
+              <p id="incorrectGuesses"></p>
           </div>
       </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
