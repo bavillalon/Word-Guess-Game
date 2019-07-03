@@ -1,0 +1,24 @@
+body{
+    background-image: url("../images/background.png");
+    color: #aaaaaa;
+}
+
+header{
+    background-color: #383838;
+    
+}
+h1, h2, h3{
+    color: #c30707;
+    font-family: 'Griffy', cursive;
+}
+
+h4, h5{
+    color:#c30707;
+    font-family: 'Griffy', cursive;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+

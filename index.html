@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Griffy&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>Hangman</title>
   </head>
@@ -26,15 +28,21 @@
                   Play will continue until the full word is revealed or has guessed incorrectly 6 times, whichever is first.</p>
           </div>
           <div>
-                <h4>Hangman</h4>
                 <div class="row">
-                   <div class="col-sm-3"><img id="hangmanImage" class="w-75" src="assets/images/Hangman-0.png"></div>
-                    <div class="col-sm-4">
+                   <div class="col-4"><img id="hangmanImage" class="img-responsive" src="assets/images/Hangman-0.png"></div>
+                    <div class="col-4">
+                        <h3>Current Game</h3>
                         <p id="gameStatus">Good Luck!</p>
                         <p id="currentLetterGuess"></p>
                         <p id="printToScreen"></p>
                         <p id="incorrectGuesses"></p>
                     </div> 
+                    <div class="col-4">
+                        <h3>Stats</h3>
+                        <p id="wins">Wins: </p> 
+                        <p id="losses">losses: </p>
+                        
+                    </div>
                 </div>   
           </div>
       </div>

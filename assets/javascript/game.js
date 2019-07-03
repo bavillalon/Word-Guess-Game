@@ -14,25 +14,28 @@ var wins=0;
 var losses=0;
 
 
+wordToGuess=words[Math.floor(Math.random()*words.length)];
+for(var i=0;i<wordToGuess.length; i++){
+    if (wordToGuess[i]===" "){
+        printToScreen+=" ";
+    }
+    else{
+    printToScreen+="_";
+    }
+}
+newWord=false;
 
+document.getElementById('hangmanImage').src="assets/images/Hangman-"+strikes+".png";
+document.getElementById('gameStatus').innerHTML=gameStatus;
+document.getElementById("currentLetterGuess").innerHTML="Player guessed: " + currentLetterGuess;
+document.getElementById("printToScreen").innerHTML="Progress: " + printToScreen;
+document.getElementById("incorrectGuesses").innerHTML="Incorrect Guesses: " + incorrectGuesses;
+document.getElementById("wins").innerHTML="Wins: " + wins;
+document.getElementById("losses").innerHTML="Losses: "+ losses;
 
 document.onkeyup=function(event){
     usedLetter=false;
     currentLetterGuess = event.key.toLowerCase();
-
-    if(newWord){
-        wordToGuess=words[Math.floor(Math.random()*words.length)];
-        console.log(wordToGuess);
-        for(var i=0;i<wordToGuess.length; i++){
-            if (wordToGuess[i]===" "){
-                printToScreen+=" ";
-            }
-            else{
-            printToScreen+="_";
-            }
-        }
-        newWord=false;
-    }
     
     for(var i=0; i<userGuesses.length;i++){
         usedLetter=usedLetter||userGuesses[i]===currentLetterGuess;
@@ -72,6 +75,20 @@ document.onkeyup=function(event){
         incorrectGuesses="";
         strikes=0;
         userGuesses="";
+        losses++;
+        if(newWord){
+            wordToGuess=words[Math.floor(Math.random()*words.length)];
+            console.log(wordToGuess);
+            for(var i=0;i<wordToGuess.length; i++){
+                if (wordToGuess[i]===" "){
+                    printToScreen+=" ";
+                }
+                else{
+                printToScreen+="_";
+                }
+            }
+            newWord=true;
+        }
     }
     else if(printToScreen===wordToGuess){
         gameStatus="This is a win win win situation! Play again to see if your luck continues"
@@ -81,6 +98,20 @@ document.onkeyup=function(event){
         incorrectGuesses="";
         strikes=0;
         userGuesses="";
+        wins++;
+        if(newWord){
+            wordToGuess=words[Math.floor(Math.random()*words.length)];
+            console.log(wordToGuess);
+            for(var i=0;i<wordToGuess.length; i++){
+                if (wordToGuess[i]===" "){
+                    printToScreen+=" ";
+                }
+                else{
+                printToScreen+="_";
+                }
+            }
+            newWord=true;
+        }
     }
 
     
@@ -89,6 +120,8 @@ document.onkeyup=function(event){
     document.getElementById("currentLetterGuess").innerHTML="Player guessed: " + currentLetterGuess;
     document.getElementById("printToScreen").innerHTML="Progress: " + printToScreen;
     document.getElementById("incorrectGuesses").innerHTML="Incorrect Guesses: " + incorrectGuesses;
+    document.getElementById("wins").innerHTML="Wins: " + wins;
+    document.getElementById("losses").innerHTML="Losses: "+ losses;
 }
 
 
