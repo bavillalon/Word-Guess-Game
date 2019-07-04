@@ -13,34 +13,39 @@
     <title>Hangman</title>
   </head>
   <body>
-      <header>
+      <header class="py-2 border-bottom">
         <div class="container">
-            <h1>Hangman Game</h1>
+            <h1 class="d-inline">Hangman Game</h1>
         </div>
       </header>
       
-      <div class="container">
+      <div class="container my-3 border p-3">
           <div>
               <h3>Object of the game and rules:</h3>
               <p>The object of the game is to not die by correctly guessing a word one letter at a time. 
                   The player will pick a letter and if the word contains the letter guessed, it will appear. 
                   If the letter guessed is incorrect, the player is one guess closer to being hanged. 
-                  Play will continue until the full word is revealed or has guessed incorrectly 6 times, whichever is first.</p>
+                  Play will continue until the full word is revealed or has guessed incorrectly 6 times, whichever is first. 
+                  Each guess MUST be a letter. An error will display if an invalid character is selected</p>
+          </div>
+          <div>
+              <h3>Hint</h3>
+              <p id="hint"></p>
           </div>
           <div>
                 <div class="row">
-                   <div class="col-4"><img id="hangmanImage" class="img-responsive" src="assets/images/Hangman-0.png"></div>
-                    <div class="col-4">
-                        <h3>Current Game</h3>
-                        <p id="gameStatus">Good Luck!</p>
-                        <p id="currentLetterGuess"></p>
-                        <p id="printToScreen"></p>
-                        <p id="incorrectGuesses"></p>
+                   <div class="col-sm"><img id="hangmanImage" class="img-fluid" src="assets/images/Hangman-0.png"></div>
+                    <div class="col-sm border p-0 m-2">
+                        <h4 class="p-2 m-0">Current Game</h4>
+                        <p class="mx-1" id="gameStatus"></p>
+                        <p class="mx-1" id="currentLetterGuess"></p>
+                        <p class="mx-1" id="printToScreen"></p>
+                        <p class="mx-1" id="incorrectGuesses"></p>
                     </div> 
-                    <div class="col-4">
-                        <h3>Stats</h3>
-                        <p id="wins">Wins: </p> 
-                        <p id="losses">losses: </p>
+                    <div class="col-sm border p-0 m-2">
+                        <h4 class="p-2 m-0">Stats</h4>
+                        <p class="mx-1" id="wins"></p> 
+                        <p class="mx-1" id="losses"></p>
                         
                     </div>
                 </div>   

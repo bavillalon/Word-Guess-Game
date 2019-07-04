@@ -4,19 +4,22 @@ body{
 }
 
 header{
-    background-color: #383838;
-    
+    background-color: #30303a;
 }
-h1, h2, h3{
-    color: #c30707;
+h1{
+    color:#f81414;
     font-family: 'Griffy', cursive;
 }
 
-h4, h5{
-    color:#c30707;
+h3{
+    color:#f81414;
     font-family: 'Griffy', cursive;
 }
-
+h4{
+    color:#f81414;
+    font-family: 'Griffy', cursive;
+    background-color: #37373f;
+}
 img{
     width: 200px;
     height: 200px;
